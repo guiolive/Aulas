@@ -1,0 +1,52 @@
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
+.container{
+  margin: 5px;
+  border: 1px solid;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container > div{
+  width: 100px;
+  height: 150px;
+  border: 1px solid red;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav{
+  background: #ddd;
+  height: 70px;
+  display: flex;
+  font-size: 40px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CSS PARA TELAS MÉDIAS */
+@media all and (min-width: 700px){
+  nav{
+    height: 140px;
+    font-size: xx-large;
+    font-weight: 500;
+    background: red;
+  }
+  .container > div {
+    width: 90px;
+    height: 90px;
+  }
+  .container{
+    min-height: 200px;
+    justify-content: center;
+  }
+}
