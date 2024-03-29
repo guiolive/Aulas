@@ -1,0 +1,1 @@
+Trata-se de um repositório com os conceitos apresentados no bootcamp web dev da escola de programação Ironhack. Para fixar o aprendizado, no início costumo comentar cada linha de código, com o tempo vou retirando.
