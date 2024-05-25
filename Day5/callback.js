@@ -5,16 +5,28 @@ function isEven(element) {
   return element % 2 === 0;
 }
 
-// Agora vamos criar uma função que retorna um numero randômico de 0 a 99 PAR.
-function getRandomEven(callback) {
-  let randomNumber = Math.floor(Math.random() * 100);
+function getRandomNumberEven(callback) {
+  let randomico = Math.floor(Math.random() * 100);
+  let randomicoPar = callback(randomico);
 
-  if (callback(randomNumber)) {
-    return `Seu número randômico e  par é ${randomNumber}`;
+  if (randomicoPar) {
+    return `Seu número randômico par é ${randomico}`;
   } else {
-    console.log("O número randômico gerado foi ímpar, vamos tentar novamente");
-    return getRandomEven(callback);
+    console.log(`Seu número é ${randomico}, não é par`);
+    return getRandomNumberEven(isEven);
   }
 }
 
-console.log(getRandomEven(isEven));
+getRandomNumberEven(isEven);
+
+function multiplicador(numero){
+  return numero() * 10;
+
+}
+
+function random(){
+  return  Math.floor(Math.random() * 100);
+}
+
+console.log(multiplicador(random))
+

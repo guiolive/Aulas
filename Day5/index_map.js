@@ -8,20 +8,10 @@ const places = [
 
 const novaArray = places.map((element) => {
   return element.title;
-}) 
-
-const precosReal = places.map((element) =>{
-  return element.price * 5.2;
+  
 })
 
-const tituloPreco = places.map((element)=>{
-  return {
-    title: element.title,
-    price: element.price,
-  }
+const filtrada = places.filter((element)=>{
+  return element.type == 'Entire place'
 })
-
-
-console.log(novaArray)
-console.log(precosReal)
-console.log(tituloPreco)
+console.log(filtrada)
