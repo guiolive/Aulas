@@ -6,12 +6,17 @@ const places = [
   { title: "Bungalow 31 from la rambia", price: 900, type: "Shared room", pool: false, garage: false },
 ];
 
-const novaArray = places.map((element) => {
-  return element.title;
-  
+const onlyPrices = places.map((element)=>{
+  if(element.price >= 900){
+    return element.type
+  }
 })
 
-const filtrada = places.filter((element)=>{
-  return element.type == 'Entire place'
+const precoTitulo = places.map((element)=>{
+  return {
+    title: element.title,
+    price: element.price
+  }
 })
-console.log(filtrada)
+
+console.log(precoTitulo)
