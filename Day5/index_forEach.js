@@ -1,6 +1,12 @@
 // FOR EACH
-const numbers = [10, 20, 30, 40, 50];
+const numbers = [10, 20, 30, 401, 50];
 
+const maiorQue40 = [];
 numbers.forEach((element)=>{
- console.log(element * 10)
+if(element > 40){
+  maiorQue40.push(element);
+
+}
 })
+
+console.log(maiorQue40)
